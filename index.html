@@ -1,0 +1,2708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'Fallon IL Realtors & Real Estate Agents - Complete Directory</title>
+    <meta name="description" content="Find the best real estate agents in O'Fallon, Illinois. Compare all 23+ top realtors with ratings, specialties, and military relocation expertise. Your complete local guide.">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Styles - Real Estate Purple Theme */
+        :root {
+            --primary-color: #805ad5;
+            --secondary-color: #6b46c1;
+            --accent-color: #b794f6;
+            --light-color: #f7fafc;
+            --dark-color: #2d3748;
+            --gray-color: #718096;
+            --light-gray: #e2e8f0;
+            --premium-color: #f6ad55;
+            --success-color: #38a169;
+            --border-radius: 5px;
+            --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #553c9a;
+            color: white;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark-color);
+            margin: 2px 0;
+            transition: var(--transition);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Matcher Section */
+        .matcher {
+            background-color: var(--light-gray);
+        }
+
+        .matcher-content {
+            max-width: 700px;
+            margin: 40px auto 0;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+        }
+
+        .matcher-question {
+            display: none;
+            padding: 30px;
+        }
+
+        .matcher-question.active {
+            display: block;
+        }
+
+        .matcher-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .matcher-option {
+            padding: 15px;
+            background-color: var(--light-gray);
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .matcher-option:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .matcher-result {
+            display: none;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .matcher-result.active {
+            display: block;
+        }
+
+        #result-content {
+            margin: 20px 0;
+        }
+
+        /* Comparison Section */
+        .comparison {
+            background-color: white;
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .filter-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            background-color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+            position: sticky;
+            top: 0px;
+            z-index: 100;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            padding: 12px 15px;
+        }
+
+        tbody tr {
+            transition: var(--transition);
+        }
+
+        tbody tr:hover {
+            background-color: var(--light-gray);
+        }
+
+        .premium-row {
+            background-color: rgba(246, 173, 85, 0.1);
+        }
+
+        .premium-row:hover {
+            background-color: rgba(246, 173, 85, 0.2);
+        }
+
+        .agent-logo-small {
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            object-fit: contain;
+        }
+
+        .agent-name-cell {
+            vertical-align: middle;
+        }
+
+        .name-wrapper {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        td {
+            vertical-align: middle;
+        }
+
+        .star-rating {
+            color: var(--premium-color);
+        }
+
+        /* Profiles Section */
+        .profiles {
+            background-color: var(--light-gray);
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .profile-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-header {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .profile-logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-right: 15px;
+        }
+
+        .profile-title h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .profile-type {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+
+        .profile-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .profile-info {
+            margin-bottom: 15px;
+        }
+
+        .profile-info h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-info p, .profile-info ul {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+
+        .profile-info ul {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+
+        .profile-footer {
+            padding: 15px 20px;
+            background-color: var(--light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .profile-rating {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-rating .star-rating {
+            margin-right: 5px;
+        }
+
+        .profile-link a {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .premium-card {
+            border: 2px solid var(--premium-color);
+        }
+
+        .premium-badge {
+            background-color: var(--premium-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        /* Featured Section */
+        .featured {
+            background-color: white;
+        }
+
+        .featured-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .featured-image {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .featured-logo {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+        }
+
+        .featured-info {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .featured-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .benefit {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .benefit h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: white;
+        }
+
+        .faq-list {
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .faq-question {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            flex: 1;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            padding: 0 0 20px;
+            display: none;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-answer p {
+            margin-bottom: 15px;
+        }
+
+        .faq-answer ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-gray);
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .map-container {
+            flex: 1;
+            min-width: 300px;
+            height: 450px;
+        }
+
+        .map-container iframe {
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .premium-contact {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .contact-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-right: 20px;
+        }
+
+        .premium-contact h4 {
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .premium-contact p {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-logo h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: #a3c2db;
+        }
+
+        .footer-links ul li a:hover {
+            color: white;
+        }
+
+        .footer-disclaimer {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+                margin-left: 0;
+            }
+            
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .featured-content {
+                flex-direction: column;
+            }
+            
+            .featured-image {
+                order: -1;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .filters {
+                flex-direction: column;
+            }
+            
+            .matcher-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>O'Fallon Realtors Directory</h1>
+            <nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#matcher">Find Your Match</a></li>
+                    <li><a href="#comparison">Quick Compare</a></li>
+                    <li><a href="#profiles">Agent Profiles</a></li>
+                    <li><a href="#featured">Featured Agent</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <h2>Find the Best Real Estate Agents in O'Fallon, Illinois</h2>
+            <p>Compare all 23+ top realtors in O'Fallon, IL with ratings, specialties, military relocation expertise, and pricing. Your complete guide to finding the perfect agent for buying or selling your home.</p>
+            <div class="hero-buttons">
+                <a href="#comparison" class="btn btn-primary">Compare All Realtors</a>
+                <a href="#matcher" class="btn btn-secondary">Find My Perfect Match</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Story Section -->
+    <section style="background-color: white; padding: 60px 0;">
+        <div class="container">
+            <h2 style="color: var(--secondary-color); margin-bottom: 30px; text-align: center;">Looking for a Realtor in O'Fallon? You're Not Alone.</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px;">
+                    With 23+ real estate agents and teams spread across O'Fallon, Shiloh, and the surrounding Metro East areas, choosing the right realtor can feel overwhelming.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px;">
+                    Maybe you're a military family PCSing to Scott Air Force Base wondering about VA loan specialists, or you've heard about luxury home experts but aren't sure who handles your price range. Perhaps you need someone who specializes in first-time buyers or you're dealing with a corporate relocation and need a realtor who understands tight timelines.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px; font-weight: 600;">
+                    That's exactly why we created this complete comparison guide. We've researched every agent, verified their specialties, and organized everything so you can find your perfect realtor match without the runaround.
+                </p>
+                
+                <!-- Stats Section -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin: 40px 0; text-align: center;">
+                    <div style="background-color: var(--light-gray); padding: 30px 20px; border-radius: var(--border-radius);">
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px;">23+</h3>
+                        <p style="font-weight: 600; margin: 0;">Top Agents Compared</p>
+                    </div>
+                    <div style="background-color: var(--light-gray); padding: 30px 20px; border-radius: var(--border-radius);">
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px;">$338K</h3>
+                        <p style="font-weight: 600; margin: 0;">Median Home Price</p>
+                    </div>
+                    <div style="background-color: var(--light-gray); padding: 30px 20px; border-radius: var(--border-radius);">
+                        <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 10px;">56%</h3>
+                        <p style="font-weight: 600; margin: 0;">Sell Above Asking</p>
+                    </div>
+                </div>
+
+                <!-- Why Compare Section -->
+                <div style="background-color: var(--light-gray); padding: 30px; border-radius: var(--border-radius); margin-top: 40px; text-align: left;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 20px; text-align: center;">Why Compare Before You Commit?</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 15px;">
+                        Real estate commissions in O'Fallon typically range from 2.5% to 3% per agent, but service levels vary dramatically. Some agents specialize in luxury homes ($500K+), while others focus on first-time buyers or military relocations. Commission rates don't tell the whole story about marketing reach, negotiation skills, or response times.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin: 0; font-weight: 600; text-align: center;">
+                        Our side-by-side comparison shows you exactly what to expect from each agent, helping you make an informed decision based on expertise, not just price.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matcher Section -->
+    <section id="matcher" class="matcher">
+        <div class="container">
+            <h2>Find Your Real Estate Agent Match</h2>
+            <p>Answer a few questions about your home buying or selling needs to find the perfect O'Fallon realtor for you.</p>
+            
+            <div class="matcher-content">
+                <div class="matcher-question active" id="question-1">
+                    <h3>What is your primary real estate need?</h3>
+                    <div class="matcher-options">
+                        <button class="matcher-option" data-value="buying">Buying a Home</button>
+                        <button class="matcher-option" data-value="selling">Selling a Home</button>
+                        <button class="matcher-option" data-value="military">Military PCS/Relocation</button>
+                        <button class="matcher-option" data-value="firsttime">First-Time Home Buyer</button>
+                        <button class="matcher-option" data-value="luxury">Luxury Home ($500K+)</button>
+                        <button class="matcher-option" data-value="newconstruction">New Construction</button>
+                        <button class="matcher-option" data-value="investment">Investment Property</button>
+                        <button class="matcher-option" data-value="commercial">Commercial Real Estate</button>
+                    </div>
+                </div>
+                
+                <div class="matcher-question" id="question-2">
+                    <h3>What's your preferred price range?</h3>
+                    <div class="matcher-options">
+                        <button class="matcher-option" data-value="under200">Under $200K</button>
+                        <button class="matcher-option" data-value="200-350">$200K - $350K</button>
+                        <button class="matcher-option" data-value="350-500">$350K - $500K</button>
+                        <button class="matcher-option" data-value="500plus">$500K+</button>
+                        <button class="matcher-option" data-value="flexible">Flexible/Not Sure</button>
+                    </div>
+                </div>
+                
+                <div class="matcher-question" id="question-3">
+                    <h3>What type of service do you prefer?</h3>
+                    <div class="matcher-options">
+                        <button class="matcher-option" data-value="team">Full-Service Team</button>
+                        <button class="matcher-option" data-value="solo">Individual Agent</button>
+                        <button class="matcher-option" data-value="volume">High-Volume Producer</button>
+                        <button class="matcher-option" data-value="boutique">Boutique/Personal Touch</button>
+                        <button class="matcher-option" data-value="nopreference">No Preference</button>
+                    </div>
+                </div>
+                
+                <div class="matcher-result" id="matcher-result">
+                    <h3>Your Perfect Real Estate Agent Match</h3>
+                    <div id="result-content"></div>
+                    <button id="restart-matcher" class="btn btn-secondary">Start Over</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="comparison">
+        <div class="container">
+            <h2>Real Estate Agent Comparison Chart</h2>
+            <p>Compare all top real estate agents in the O'Fallon area side by side to find the perfect match for your home buying or selling needs.</p>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="type-filter">Agent Type</label>
+                    <select id="type-filter">
+                        <option value="all">All Types</option>
+                        <option value="team">Team</option>
+                        <option value="solo">Individual Agent</option>
+                        <option value="brokerage">Full Brokerage</option>
+                        <option value="builder">Builder/Developer</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="specialty-filter">Specialty Focus</label>
+                    <select id="specialty-filter">
+                        <option value="all">All Specialties</option>
+                        <option value="military">Military Relocation</option>
+                        <option value="luxury">Luxury Homes</option>
+                        <option value="newconstruction">New Construction</option>
+                        <option value="firsttime">First-Time Buyers</option>
+                        <option value="investment">Investment Properties</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="price-filter">Price Range Focus</label>
+                    <select id="price-filter">
+                        <option value="all">All Price Ranges</option>
+                        <option value="under200">Under $200K</option>
+                        <option value="200-350">$200K - $350K</option>
+                        <option value="350-500">$350K - $500K</option>
+                        <option value="500plus">$500K+</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table id="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Agent/Team Name</th>
+                            <th>Type</th>
+                            <th>Specialties</th>
+                            <th>Experience</th>
+                            <th>Price Range</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profiles Section -->
+    <section id="profiles" class="profiles">
+        <div class="container">
+            <h2>Real Estate Agent Profiles</h2>
+            <p>Detailed information about each top real estate agent and team in the O'Fallon area to help you make an informed decision.</p>
+            
+            <div id="agent-profiles" class="profile-grid">
+                <!-- Agent profile cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured" class="featured">
+        <div class="container">
+            <div class="premium-badge">Featured</div>
+            <h2>Featured Agent: Judy Dempcy Homes</h2>
+            <p>Our top recommendation for balanced, high-level expertise across military relocation, luxury homes, and new construction with proven results and exceptional client service.</p>
+            
+            <div class="featured-content">
+                <div class="featured-image">
+                    <img src="images/logos/judydempcy.jpg" alt="Judy Dempcy Homes logo" class="featured-logo" 
+                         onload="console.log('✅ Featured logo loaded successfully')" 
+                         onerror="console.log('⚠️ Featured logo issue, but continuing'); this.style.opacity='0.7';">
+                </div>
+                
+                <div class="featured-info">
+                    <h3>Why Judy Dempcy Homes Stands Out</h3>
+                    <p>With 174 sales in the last 12 months and 994 total sales specifically in O'Fallon, Judy Dempcy Homes represents the ideal combination of high transaction volume and proven expertise across all critical market segments. Their team, led by Rob Cole with 17.5+ years of experience, dominates the military relocation, luxury home, and new construction markets while maintaining a 4.9-star rating from over 100 client reviews.</p>
+                    
+                    <div class="featured-benefits">
+                        <div class="benefit">
+                            <h4>Market Domination</h4>
+                            <p>174 sales in 12 months, 994 total O'Fallon sales with $25K-$1.2M price range</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <h4>Military Specialists</h4>
+                            <p>Proven expertise with Scott AFB relocations and VA loan processes</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <h4>Luxury Leaders</h4>
+                            <p>Consistent sales of $500K+ properties including $1.8M+ luxury estates</p>
+                        </div>
+                        
+                        <div class="benefit">
+                            <h4>Technology Edge</h4>
+                            <p>Advanced Brivity CRM provides clients real-time transaction updates</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://jdhrealestate.com" target="_blank" class="btn btn-primary">Visit Judy Dempcy Homes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p>Common questions about choosing a real estate agent in the O'Fallon area and the local housing market.</p>
+            
+            <div class="faq-list">
+                <!-- FAQ items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Find Your Perfect O'Fallon Realtor</h2>
+            <p>Ready to buy or sell your home? Contact any of the top real estate agents in our directory or get started with our featured recommendation.</p>
+            
+            <div class="contact-content">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d24966.682117028735!2d-89.92642272345581!3d38.59219199650342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srealtors%20near%20O'Fallon%2C%20IL%2062269!5e0!3m2!1sen!2sus!4v1653508272909!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Ready to start your real estate journey?</h3>
+                    <p>Whether you're buying your first home, selling to relocate, or investing in O'Fallon real estate, our directory helps you find the right agent for your specific needs.</p>
+                    <p>For proven results across military relocation, luxury homes, and new construction, we recommend:</p>
+                    <div class="premium-contact">
+                        <img src="images/logos/judydempcy.jpg" alt="Judy Dempcy Homes logo" class="contact-logo" 
+                             onload="console.log('✅ Contact logo loaded successfully')" 
+                             onerror="console.log('⚠️ Contact logo issue, but continuing'); this.style.opacity='0.7';">
+                        <div>
+                            <h4>Judy Dempcy Homes</h4>
+                            <p>Phone: (618) 632-4030</p>
+                            <p>Address: 901 W Highway 50, O'Fallon, IL 62269</p>
+                            <p>Website: <a href="https://jdhrealestate.com" target="_blank">jdhrealestate.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>O'Fallon Realtors Directory</h3>
+                    <p>Your guide to real estate agents in the 62269 area</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#matcher">Find Your Match</a></li>
+                        <li><a href="#comparison">Comparison Chart</a></li>
+                        <li><a href="#profiles">Agent Profiles</a></li>
+                        <li><a href="#featured">Featured Agent</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-disclaimer">
+                    <h4>Disclaimer</h4>
+                    <p>This directory is for informational purposes only. Information is subject to change. Please contact individual real estate agents for the most current services, pricing, and availability. We are not affiliated with any agent listed except our featured partner.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 O'Fallon Realtors Directory. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Complete Real Estate Agents Data for O'Fallon Area (23 agents/teams)
+        const realtorsData = [
+          {
+            id: "judy-dempcy-homes",
+            name: "Judy Dempcy Homes",
+            type: "Team",
+            brokerage: "Keller Williams Pinnacle",
+            specialties: ["Military Relocation", "Luxury Homes", "New Construction", "First-Time Buyers"],
+            experience: "17.5+ years",
+            rating: 4.9,
+            reviews: 108,
+            website: "https://jdhrealestate.com",
+            logo: "images/logos/judydempcy.jpg",
+            address: "901 W Highway 50, O'Fallon, IL 62269",
+            phone: "(618) 632-4030",
+            isPremium: true,
+            priceRange: "$25K - $1.2M",
+            salesVolume: "174 sales (12 months)",
+            features: [
+              "Market leader with 174 sales in 12 months",
+              "Proven military relocation expertise",
+              "Luxury market specialist ($500K+)",
+              "Advanced Brivity CRM technology"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "ellerbrake-group",
+            name: "The Ellerbrake Group",
+            type: "Team",
+            brokerage: "Keller Williams Pinnacle",
+            specialties: ["First-Time Buyers", "Military Relocation", "Luxury Homes"],
+            experience: "30+ years",
+            rating: 5.0,
+            reviews: 108,
+            website: "https://ellerbrake.com",
+            logo: "images/logos/ellerbrake.png",
+            address: "1309 Scott Troy Rd, Lebanon, IL 62254",
+            phone: "(618) 632-0001",
+            isPremium: false,
+            priceRange: "$20K - $885K",
+            salesVolume: "32 sales (12 months)",
+            features: [
+              "30+ years of experience",
+              "Served over 1,000 families",
+              "First-time buyer specialists",
+              "Personal relationship focus"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: false,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "linda-frierdich-group",
+            name: "The Linda Frierdich Group",
+            type: "Team",
+            brokerage: "Century 21 Advantage",
+            specialties: ["Luxury Homes", "New Construction", "Commercial", "Investment Properties"],
+            experience: "20+ years",
+            rating: 5.0,
+            reviews: 270,
+            website: "https://yourhomeresource.sites.c21.homes",
+            logo: "images/logos/century21.webp",
+            address: "103 South Main, Columbia, IL 62236",
+            phone: "(618) 719-3134",
+            isPremium: false,
+            priceRange: "$5.5K - $1.1M",
+            salesVolume: "82 sales (12 months)",
+            features: [
+              "Over $800M in sales",
+              "Helped 8,000+ clients",
+              "Full-service capabilities",
+              "Commercial and land specialist"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: true,
+            commercialFocus: true,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "veliz-vice-team",
+            name: "The Veliz-Vice Team",
+            type: "Team",
+            brokerage: "Century 21 Advantage",
+            specialties: ["Market Valuation", "Quick Sales", "St. Clair County"],
+            experience: "39+ years",
+            rating: 4.8,
+            reviews: 128,
+            website: "https://velizviceteam.com",
+            logo: "images/logos/velizvice.webp",
+            address: "Columbia, IL",
+            phone: "(618) 978-0519",
+            isPremium: false,
+            priceRange: "$40K - $702K",
+            salesVolume: "96 sold properties",
+            features: [
+              "39 years of Cindy Veliz experience",
+              "Fast, full-price offers",
+              "St. Clair County specialists",
+              "Strong market preparation"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: false,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "toni-lucas-premier",
+            name: "Toni Lucas / Premier Realty Group",
+            type: "Team",
+            brokerage: "Worth Clark Realty",
+            specialties: ["High Volume", "General Real Estate", "Metro East"],
+            experience: "9+ years",
+            rating: 5.0,
+            reviews: 281,
+            website: "https://worthclark.com/agent/1712349-Toni-Lucas/",
+            logo: "images/logos/wcr.png",
+            address: "60 S State Rt 157, Edwardsville, IL 62025",
+            phone: "(618) 973-1479",
+            isPremium: false,
+            priceRange: "$15K - $948K",
+            salesVolume: "306 sales (12 months)",
+            features: [
+              "Highest volume: 306 sales annually",
+              "Over $374M in 5-year sales",
+              "Metro East coverage",
+              "Proven team system"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: true,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "cari-brunner",
+            name: "Cari Brunner",
+            type: "Individual Agent",
+            brokerage: "RE/MAX Preferred",
+            specialties: ["Distressed Properties", "First-Time Buyers", "New Construction"],
+            experience: "17-20 years",
+            rating: 5.0,
+            reviews: 84,
+            website: "https://zillow.com/profile/CariBrunner1",
+            logo: "images/logos/remax.png",
+            address: "1668 Windham Way, O'Fallon, IL 62269",
+            phone: "(618) 830-8622",
+            isPremium: false,
+            priceRange: "$18K - $975K",
+            salesVolume: "75 sales (12 months)",
+            features: [
+              "CDPE certified (foreclosure expert)",
+              "High individual production",
+              "20 years experience",
+              "Wide price range capability"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: true,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "kappert-group",
+            name: "The Kappert Group",
+            type: "Team",
+            brokerage: "RE/MAX Signature Properties",
+            specialties: ["New Construction", "Luxury Homes", "Military Relocation"],
+            experience: "30+ years",
+            rating: 5.0,
+            reviews: 109,
+            website: "https://kappertgroup.com",
+            logo: "images/logos/kappert.webp",
+            address: "8 E Main St, Mascoutah, IL 62258",
+            phone: "(618) 566-7781",
+            isPremium: false,
+            priceRange: "$17K - $1.5M",
+            salesVolume: "92 sales (12 months)",
+            features: [
+              "Connected to Kappert Construction",
+              "New construction specialists",
+              "50+ years combined experience",
+              "Luxury custom homes"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "christi-johnson-journey",
+            name: "Christi Johnson / Journey Home Team",
+            type: "Team",
+            brokerage: "Keller Williams Pinnacle",
+            specialties: ["Military Relocation", "Military Spouse", "First-Time Buyers"],
+            experience: "10+ years",
+            rating: 5.0,
+            reviews: 65,
+            website: "https://journeyhome.kw.com",
+            logo: "images/logos/journeyhome.png",
+            address: "1003 East Wesley Drive, Suite C, O'Fallon, IL 62269",
+            phone: "(618) 491-3335",
+            isPremium: false,
+            priceRange: "$12K - $1.2M",
+            salesVolume: "62 sales (12 months)",
+            features: [
+              "Military spouse experience",
+              "Personal PCS understanding",
+              "Multi-million dollar producer",
+              "Based in O'Fallon"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: false,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "homes-by-janell",
+            name: "Homes by Janell",
+            type: "Team",
+            brokerage: "Independent",
+            specialties: ["Luxury Homes", "Military Relocation", "Established Brokerage"],
+            experience: "18+ years",
+            rating: 5.0,
+            reviews: 65,
+            website: "https://homesbyjanell.com",
+            logo: "images/logos/janell.png",
+            address: "107 West 1st Street, O'Fallon, IL 62269",
+            phone: "(618) 726-2242",
+            isPremium: false,
+            priceRange: "$12.8K - $1.76M",
+            salesVolume: "High volume",
+            features: [
+              "Independent brokerage",
+              "Luxury market leader",
+              "Relationship-focused",
+              "10+ years team experience"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: false,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "red-door-realty",
+            name: "Red Door Realty Group",
+            type: "Team",
+            brokerage: "Independent",
+            specialties: ["Property Management", "Local Heritage", "Full Service"],
+            experience: "25+ years",
+            rating: 5.0,
+            reviews: 72,
+            website: "https://reddoorrg.com",
+            logo: "images/logos/reddoor.png",
+            address: "1001 S Lincoln Ave, O'Fallon, IL 62269",
+            phone: "(618) 632-9448",
+            isPremium: false,
+            priceRange: "$30K - $725K",
+            salesVolume: "83 sales (12 months)",
+            features: [
+              "6th generation O'Fallon resident",
+              "Property management services",
+              "Independent brokerage",
+              "Multi-generational expertise"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: true,
+            commercialFocus: true,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "coldwell-banker-brown",
+            name: "Coldwell Banker Brown Realtors",
+            type: "Brokerage",
+            brokerage: "Coldwell Banker",
+            specialties: ["Military Relocation", "Corporate Transfers", "Full Service"],
+            experience: "50+ years",
+            rating: 5.0,
+            reviews: 447,
+            website: "https://coldwellbanker.com",
+            logo: "images/logos/coldwell.svg",
+            address: "911 East Highway 50, O'Fallon, IL 62269",
+            phone: "(618) 632-4700",
+            isPremium: false,
+            priceRange: "$11K - $2M",
+            salesVolume: "406 sales (12 months)",
+            features: [
+              "Highest volume: 406 sales",
+              "30+ agents in O'Fallon office",
+              "Major brand recognition",
+              "Military relocation focus"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: true,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "strano-associates",
+            name: "Strano & Associates",
+            type: "Brokerage",
+            brokerage: "Independent",
+            specialties: ["Local Market Expert", "Neighborhood Specialist", "Metro East"],
+            experience: "Long-standing",
+            rating: 5.0,
+            reviews: 120,
+            website: "https://strano.com",
+            logo: "images/logos/strano.png",
+            address: "Multiple offices",
+            phone: "Office-specific",
+            isPremium: false,
+            priceRange: "$155K - $725K",
+            salesVolume: "Major participant",
+            features: [
+              "Major independent brokerage",
+              "Strong market data",
+              "Neighborhood expertise",
+              "Metro East coverage"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "h3-capital",
+            name: "H3 Capital Real Estate",
+            type: "Brokerage",
+            brokerage: "Independent",
+            specialties: ["Veterans", "Military Personnel", "Rentals"],
+            experience: "30+ years",
+            rating: 5.0,
+            reviews: 100,
+            website: "https://h3capital.net",
+            logo: "images/logos/h3.jpg",
+            address: "108 Sunnyside St, Unit A, O'Fallon, IL 62269",
+            phone: "(618) 622-3343",
+            isPremium: false,
+            priceRange: "$148K - $747K",
+            salesVolume: "7 O'Fallon sales",
+            features: [
+              "Veteran-focused service",
+              "100+ Google reviews",
+              "30 years experience",
+              "Sales and rentals"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: false,
+            firstTimeBuyerFocus: true,
+            investmentFocus: true,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "scott-heinlein",
+            name: "Scott Heinlein / Heinlein Home Team",
+            type: "Team",
+            brokerage: "RE/MAX Alliance",
+            specialties: ["Luxury Homes", "New Construction", "Relocation"],
+            experience: "12+ years",
+            rating: 4.5,
+            reviews: 50,
+            website: "https://homes.com/real-estate-agents/scott-heinlein/rd19l41/",
+            logo: "images/logos/remax.png",
+            address: "120 S. Buchanan St, Edwardsville, IL 62025",
+            phone: "(618) 558-1298",
+            isPremium: false,
+            priceRange: "$127K - $1.5M",
+            salesVolume: "182 total sales",
+            features: [
+              "RENE certified negotiator",
+              "Certified relocation professional",
+              "Luxury market expert",
+              "New construction specialist"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "jason-thorpe",
+            name: "Jason Thorpe",
+            type: "Individual Agent",
+            brokerage: "SCHNEIDER Real Estate",
+            specialties: ["Metro Area", "Cross-State", "High Volume"],
+            experience: "12-13 years",
+            rating: 4.7,
+            reviews: 84,
+            website: "https://sresells.com",
+            logo: "images/logos/sre.png",
+            address: "1480 Woodstone Drive, Suite 217-218, Saint Charles, MO 63304",
+            phone: "(618) 514-5821",
+            isPremium: false,
+            priceRange: "$87K - $1.3M",
+            salesVolume: "239 total sales",
+            features: [
+              "High-volume individual agent",
+              "Cross-state expertise",
+              "Broad service area",
+              "Strong track record"
+            ],
+            militaryFocus: false,
+            luxuryFocus: true,
+            newConstructionFocus: false,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "nester-realty",
+            name: "Nester Realty",
+            type: "Brokerage",
+            brokerage: "Independent",
+            specialties: ["Full Service", "Commercial", "Farms & Land"],
+            experience: "Established",
+            rating: 4.5,
+            reviews: 25,
+            website: "https://nesterrealty.com",
+            logo: "images/logos/nester.jpg",
+            address: "1405 N. Green Mount Rd., Suite 150, O'Fallon, IL 62269",
+            phone: "(618) 624-0400",
+            isPremium: false,
+            priceRange: "All ranges",
+            salesVolume: "Active",
+            features: [
+              "O'Fallon office location",
+              "Full-service brokerage",
+              "Commercial capabilities",
+              "Farms and land specialist"
+            ],
+            militaryFocus: false,
+            luxuryFocus: true,
+            newConstructionFocus: false,
+            firstTimeBuyerFocus: true,
+            investmentFocus: true,
+            commercialFocus: true,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "ken-battoe",
+            name: "Ken Battoe",
+            type: "Individual Agent",
+            brokerage: "Battoe Realty",
+            specialties: ["Solo Agent", "Personal Service", "30 Years Experience"],
+            experience: "30+ years",
+            rating: 4.0,
+            reviews: 15,
+            website: "https://zillow.com/profile/user04589454",
+            logo: "images/logos/remax.png",
+            address: "Belleville, IL 62221",
+            phone: "(618) 530-4663",
+            isPremium: false,
+            priceRange: "$40K - $570K",
+            salesVolume: "3 sales (12 months)",
+            features: [
+              "30 years of experience",
+              "Solo agent - no team",
+              "Personal one-on-one service",
+              "Stress-free approach"
+            ],
+            militaryFocus: false,
+            luxuryFocus: false,
+            newConstructionFocus: false,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: false
+          },
+          {
+            id: "wittenauer-properties",
+            name: "Wittenauer Properties",
+            type: "Brokerage",
+            brokerage: "Independent",
+            specialties: ["Commercial Real Estate", "Development", "Management"],
+            experience: "Since 2017",
+            rating: 4.8,
+            reviews: 10,
+            website: "https://wittenauerproperties.com",
+            logo: "images/logos/wittenauer.avif",
+            address: "1177 North Green Mount Road, Suite 201, O'Fallon, Illinois 62269",
+            phone: "(618) 632-5850",
+            isPremium: false,
+            priceRange: "Commercial",
+            salesVolume: "500+ transactions",
+            features: [
+              "Commercial real estate specialists",
+              "Development expertise",
+              "Property management",
+              "O'Fallon based"
+            ],
+            militaryFocus: false,
+            luxuryFocus: false,
+            newConstructionFocus: false,
+            firstTimeBuyerFocus: false,
+            investmentFocus: true,
+            commercialFocus: true,
+            under200k: false,
+            range200to350: false,
+            range350to500: false,
+            range500plus: false
+          },
+          {
+            id: "karen-sheesley",
+            name: "Karen Sheesley",
+            type: "Individual Agent",
+            brokerage: "RE/MAX Preferred",
+            specialties: ["Military Relocation", "MRP Certified", "Scott AFB"],
+            experience: "10+ years",
+            rating: 4.9,
+            reviews: 30,
+            website: "https://karensheesley.com",
+            logo: "images/logos/platinum.png",
+            address: "1668 Windham Way, O'Fallon, IL",
+            phone: "(618) 670-6632",
+            isPremium: false,
+            priceRange: "$200K - $500K",
+            salesVolume: "Military focused",
+            features: [
+              "MRP certified",
+              "Cartus/USAA specialist",
+              "Scott AFB expert",
+              "Military relocation focus"
+            ],
+            militaryFocus: true,
+            luxuryFocus: false,
+            newConstructionFocus: false,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: true,
+            range200to350: true,
+            range350to500: true,
+            range500plus: false
+          },
+          {
+            id: "ca-jones",
+            name: "C.A. Jones, Inc.",
+            type: "Builder",
+            brokerage: "Builder/Developer",
+            specialties: ["New Construction", "Military Support", "Custom Homes"],
+            experience: "Since 1995",
+            rating: 4.2,
+            reviews: 45,
+            website: "https://cajonesinc.com",
+            logo: "images/logos/cajones.png",
+            address: "Multiple communities",
+            phone: "Contact via website",
+            isPremium: false,
+            priceRange: "$300K+",
+            salesVolume: "1,000+ homes built",
+            features: [
+              "Building since 1995",
+              "1,000+ homes closed",
+              "Military support programs",
+              "Near Scott AFB locations"
+            ],
+            militaryFocus: true,
+            luxuryFocus: false,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: false,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "huntington-chase",
+            name: "Huntington Chase Homes",
+            type: "Builder",
+            brokerage: "Builder/Developer",
+            specialties: ["New Construction", "Custom Homes", "O'Fallon Legacy"],
+            experience: "Multi-generational",
+            rating: 4.7,
+            reviews: 25,
+            website: "https://huntingtonchasehomes.com",
+            logo: "images/logos/huntington.avif",
+            address: "621 Flagstone Pass Dr., O'Fallon, IL 62269",
+            phone: "(618) 624-3250",
+            isPremium: false,
+            priceRange: "Entry to luxury",
+            salesVolume: "1,000+ O'Fallon homes",
+            features: [
+              "Family-run O'Fallon builder",
+              "1,000+ homes in O'Fallon",
+              "Multi-generational expertise",
+              "Custom home capabilities"
+            ],
+            militaryFocus: false,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: true,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: false,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "hl-builders",
+            name: "H&L Builders, LLC",
+            type: "Builder",
+            brokerage: "Builder/Developer",
+            specialties: ["Custom Homes", "New Construction", "Scott AFB Area"],
+            experience: "Since 1998",
+            rating: 4.5,
+            reviews: 20,
+            website: "https://hlbuilders.net",
+            logo: "images/logos/hl.png",
+            address: "785 Wall Street, Suite 100, O'Fallon, IL 62269",
+            phone: "(618) 622-2010",
+            isPremium: false,
+            priceRange: "$300K - $1M+",
+            salesVolume: "Active builder",
+            features: [
+              "3rd generation builder",
+              "Custom home specialists",
+              "Near Scott AFB",
+              "Owner involvement"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: false,
+            investmentFocus: false,
+            commercialFocus: false,
+            under200k: false,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          },
+          {
+            id: "cr-holland",
+            name: "CR Holland Real Estate",
+            type: "Builder",
+            brokerage: "Builder/Developer",
+            specialties: ["New Construction", "Exclusive Subdivisions", "Property Management"],
+            experience: "Established",
+            rating: 4.3,
+            reviews: 15,
+            website: "https://crholland.com",
+            logo: "images/logos/crholland.png",
+            address: "718 W Highway 50, O'Fallon, Illinois 62269",
+            phone: "(618) 416-7588",
+            isPremium: false,
+            priceRange: "Mid to luxury",
+            salesVolume: "Key developer",
+            features: [
+              "Exclusive subdivisions",
+              "Bethel Ridge Farms",
+              "Stone Briar development",
+              "Property management services"
+            ],
+            militaryFocus: true,
+            luxuryFocus: true,
+            newConstructionFocus: true,
+            firstTimeBuyerFocus: false,
+            investmentFocus: true,
+            commercialFocus: true,
+            under200k: false,
+            range200to350: true,
+            range350to500: true,
+            range500plus: true
+          }
+        ];
+
+        // FAQ Data for Real Estate
+        const faqData = [
+          {
+            question: "Which O'Fallon realtor should I use to find homes for sale?",
+            answer: "The best O'Fallon realtor depends on your specific needs. For military families near Scott Air Force Base, choose agents with MRP certification like Karen Sheesley or Christi Johnson. First-time buyers benefit from agents specializing in the $200K-350K range like The Ellerbrake Group. Luxury home buyers ($500K+) should work with proven specialists like Judy Dempcy Homes or Homes by Janell who have extensive high-end experience."
+          },
+          {
+            question: "Who are the best real estate agents for military relocations in O'Fallon?",
+            answer: "Top military relocation specialists include Judy Dempcy Homes (proven Scott AFB expertise), Christi Johnson (military spouse experience), Karen Sheesley (MRP certified), and The Kappert Group (military relocation focus). These agents understand PCS timelines, VA loan requirements, and can coordinate long-distance transactions for Scott Air Force Base personnel."
+          },
+          {
+            question: "What's the average home price in O'Fallon, Illinois?",
+            answer: "The median home price in O'Fallon is $338,746 as of May 2025. Starter homes typically range from $150K-250K, family homes from $250K-400K, and luxury properties from $500K-800K+. With 56% of homes selling above asking price, working with experienced local agents like Judy Dempcy Homes or Coldwell Banker Brown is essential for competitive offers."
+          },
+          {
+            question: "How competitive is the O'Fallon real estate market?",
+            answer: "O'Fallon's market is extremely competitive with 56% of homes selling above asking price. With only 133 active listings and strong Scott AFB demand, buyers often face multiple offer situations. Properties average 57 days on market, but well-priced homes sell within 30 days. Experienced agents like Toni Lucas (306 sales annually) or Judy Dempcy Homes understand winning strategies in this environment."
+          },
+          {
+            question: "Which O'Fallon real estate agents handle luxury homes?",
+            answer: "Luxury home specialists ($500K+) include Judy Dempcy Homes (sales up to $1.8M), Homes by Janell (range to $1.76M), The Linda Frierdich Group (extensive luxury portfolio), and The Kappert Group (custom construction). These agents offer premium marketing, qualified buyer networks, and understand unique aspects of high-end transactions."
+          },
+          {
+            question: "Do any O'Fallon realtors specialize in new construction?",
+            answer: "New construction specialists include The Kappert Group (connected to Kappert Construction), builders like Huntington Chase Homes, H&L Builders, and C.A. Jones Inc. For resale agents with new construction expertise, choose Judy Dempcy Homes or The Linda Frierdich Group who work with local builders and understand the building process."
+          },
+          {
+            question: "What should I expect when buying a home in O'Fallon?",
+            answer: "Expect a 30-45 day process from offer to closing, with pre-approval essential due to competitive conditions. In O'Fallon's market where 56% sell above asking, be prepared for multiple offers and quick decisions. Your agent should provide CMA analysis, strategic pricing advice, and understand local market nuances. Military buyers should work with VA loan specialists."
+          },
+          {
+            question: "Which O'Fallon neighborhoods are best for families?",
+            answer: "Top family neighborhoods include Thornbury Hill, Forest Hills, Savannah Hills, and Bristol Hills, offering excellent schools through O'Fallon CCSD 90 and Township High School District 203. These areas typically range $250K-500K. Agents like Red Door Realty (6th generation local) or Judy Dempcy Homes understand school districts and neighborhood amenities."
+          },
+          {
+            question: "How do I choose between a real estate team vs. individual agent?",
+            answer: "Teams like Judy Dempcy Homes or Coldwell Banker Brown offer specialized expertise, faster response times, and comprehensive coverage. Individual agents like Cari Brunner or Ken Battoe provide personal attention and consistent communication. Consider your priorities: comprehensive service and quick response (team) versus personal relationship and consistency (individual)."
+          },
+          {
+            question: "What questions should I ask when interviewing O'Fallon realtors?",
+            answer: "Ask: How many O'Fallon homes have you sold this year? What's your average days on market? Can you provide recent client references? How do you handle multiple offer situations? Do you specialize in my price range/situation? What's your marketing strategy? How will you communicate throughout the process? Request specific examples of recent transactions similar to yours."
+          },
+          {
+            question: "Which O'Fallon agents work best with first-time buyers?",
+            answer: "First-time buyer specialists include The Ellerbrake Group (30+ years experience), Christi Johnson (guidance focus), and agents with ABR certification. These agents provide education about the buying process, work with FHA/VA loans, and understand the $200K-350K price range popular with first-time buyers. They offer patience and detailed explanations throughout the process."
+          },
+          {
+            question: "Are there good investment opportunities in O'Fallon real estate?",
+            answer: "O'Fallon offers rental properties for Scott AFB personnel, fix-and-flip opportunities, and new construction investments. The steady military population provides consistent rental demand. Investment-focused agents like The Linda Frierdich Group or Red Door Realty can provide cash flow analysis and identify properties with strong investment potential in the $100K-300K range."
+          },
+          {
+            question: "How does Scott Air Force Base affect O'Fallon real estate?",
+            answer: "Scott AFB creates steady demand from military families, supporting property values in the $200K-400K range. Military relocations involve unique timelines, VA loans, and rental considerations. Agents like Judy Dempcy Homes, Karen Sheesley, and Christi Johnson specialize in military needs and understand PCS requirements, making them essential for this market segment."
+          },
+          {
+            question: "What's the best time to buy or sell in O'Fallon?",
+            answer: "Spring (March-May) and early summer see peak activity with highest inventory and buyer interest. Sellers often achieve better prices during these seasons. Fall offers opportunities for buyers with less competition, while winter sees lower inventory but potentially motivated sellers. Experienced agents can advise on timing based on your specific situation and current market conditions."
+          },
+          {
+            question: "Which O'Fallon real estate agents have the highest sales volume?",
+            answer: "Highest volume producers include Coldwell Banker Brown (406 sales annually), Toni Lucas (306 sales), and Judy Dempcy Homes (174 sales). High volume often indicates strong systems, market knowledge, and proven results. These agents typically have more resources, faster response times, and extensive networks of buyers and sellers."
+          },
+          {
+            question: "How do I verify a realtor's credentials in O'Fallon?",
+            answer: "Verify Illinois licenses through the Department of Financial and Professional Regulation website. Check for designations like MRP (Military Relocation Professional), ABR (Accredited Buyer's Representative), or CRS (Certified Residential Specialist). Review online ratings, ask for recent references, and verify brokerage affiliations. Professional agents readily provide licensing information and credentials."
+          }
+        ];
+
+        // SORT FUNCTION FOR MAINTAINING PREMIUM FIRST ORDER
+        function sortAgentsForDisplay(agents) {
+            return [...agents].sort((a, b) => {
+                // Premium agents always come first
+                if (a.isPremium && !b.isPremium) return -1;
+                if (!a.isPremium && b.isPremium) return 1;
+                
+                // Then sort by sales volume or rating
+                const volumeA = parseInt(a.salesVolume) || 0;
+                const volumeB = parseInt(b.salesVolume) || 0;
+                
+                if (volumeA !== volumeB) {
+                    return volumeB - volumeA;
+                }
+                
+                // Finally by rating
+                return (b.rating || 0) - (a.rating || 0);
+            });
+        }
+
+        // BULLETPROOF INITIALIZATION
+        function initializeSite() {
+            console.log('🚀 Starting realtor site initialization...');
+            console.log('📊 Realtors data loaded:', realtorsData.length, 'agents/teams');
+            console.log('❓ FAQ data loaded:', faqData.length, 'questions');
+            
+            try {
+                initializeNavigation();
+                console.log('✅ Navigation initialized');
+                
+                populateComparisonTable();
+                console.log('✅ Comparison table populated');
+                
+                populateAgentProfiles();
+                console.log('✅ Agent profiles populated');
+                
+                setupFilters();
+                console.log('✅ Filters initialized');
+                
+                setupMatcher();
+                console.log('✅ Matcher initialized');
+                
+                populateFAQSection();
+                console.log('✅ FAQ section populated');
+                
+                console.log('🎉 Realtor site initialization complete!');
+                
+            } catch (error) {
+                console.error('❌ Error during initialization:', error);
+            }
+        }
+
+        // Multiple initialization triggers
+        document.addEventListener('DOMContentLoaded', initializeSite);
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeSite);
+        } else {
+            initializeSite();
+        }
+        
+        window.addEventListener('load', function() {
+            setTimeout(initializeSite, 100);
+        });
+        
+        setTimeout(function() {
+            if (!document.querySelector('#comparison-table tbody tr')) {
+                console.log('🔄 Fallback initialization triggered');
+                initializeSite();
+            }
+        }, 500);
+
+        // Navigation functionality
+        function initializeNavigation() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav ul');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    const spans = menuToggle.querySelectorAll('span');
+                    spans.forEach(span => span.classList.toggle('active'));
+                });
+            }
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        if (navMenu.classList.contains('active')) {
+                            navMenu.classList.remove('active');
+                            menuToggle.querySelectorAll('span').forEach(span => span.classList.remove('active'));
+                        }
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Populate comparison table
+        function populateComparisonTable() {
+            const tableBody = document.querySelector('#comparison-table tbody');
+            if (!tableBody) {
+                console.warn('⚠️ Comparison table tbody not found');
+                return;
+            }
+            
+            tableBody.innerHTML = '';
+            
+            const sortedAgents = sortAgentsForDisplay(realtorsData);
+            
+            sortedAgents.forEach(agent => {
+                const row = document.createElement('tr');
+                if (agent.isPremium) {
+                    row.classList.add('premium-row');
+                }
+                
+                // Agent name cell
+                const nameCell = document.createElement('td');
+                nameCell.classList.add('agent-name-cell');
+                
+                const nameWrapper = document.createElement('div');
+                nameWrapper.classList.add('name-wrapper');
+                
+                const logo = document.createElement('img');
+                logo.src = agent.logo;
+                logo.alt = `${agent.name} Logo`;
+                logo.classList.add('agent-logo-small');
+                logo.loading = 'lazy';
+                
+                logo.onload = function() {
+                    console.log(`✅ Logo loaded: ${this.src}`);
+                };
+                
+                logo.onerror = function() {
+                    console.log(`❌ Failed to load logo: ${this.src}`);
+                    if (!this.dataset.retried) {
+                        this.dataset.retried = 'true';
+                        setTimeout(() => {
+                            this.src = this.src + '?retry=' + Date.now();
+                        }, 100);
+                        return;
+                    }
+                    this.style.display = 'none';
+                };
+                
+                nameWrapper.appendChild(logo);
+                
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = agent.name;
+                nameWrapper.appendChild(nameSpan);
+                
+                if (agent.isPremium) {
+                    const badge = document.createElement('span');
+                    badge.classList.add('premium-badge');
+                    badge.textContent = 'Featured';
+                    badge.style.fontSize = '0.7rem';
+                    badge.style.padding = '2px 8px';
+                    badge.style.marginLeft = '8px';
+                    nameWrapper.appendChild(badge);
+                }
+                
+                nameCell.appendChild(nameWrapper);
+                row.appendChild(nameCell);
+                
+                // Type cell
+                const typeCell = document.createElement('td');
+                typeCell.textContent = agent.type;
+                row.appendChild(typeCell);
+                
+                // Specialties cell
+                const specialtiesCell = document.createElement('td');
+                specialtiesCell.textContent = agent.specialties.slice(0, 2).join(', ');
+                row.appendChild(specialtiesCell);
+                
+                // Experience cell
+                const experienceCell = document.createElement('td');
+                experienceCell.textContent = agent.experience;
+                row.appendChild(experienceCell);
+                
+                // Price range cell
+                const priceCell = document.createElement('td');
+                priceCell.textContent = agent.priceRange;
+                row.appendChild(priceCell);
+                
+                // Contact cell
+                const contactCell = document.createElement('td');
+                contactCell.innerHTML = `<a href="${agent.website}" target="_blank">Contact</a>`;
+                row.appendChild(contactCell);
+                
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Populate agent profiles
+        function populateAgentProfiles() {
+            const profilesContainer = document.getElementById('agent-profiles');
+            if (!profilesContainer) {
+                console.warn('⚠️ Agent profiles container not found');
+                return;
+            }
+            
+            profilesContainer.innerHTML = '';
+            
+            const sortedAgents = sortAgentsForDisplay(realtorsData);
+            
+            sortedAgents.forEach(agent => {
+                const profileCard = document.createElement('div');
+                profileCard.className = 'profile-card';
+                if (agent.isPremium) {
+                    profileCard.classList.add('premium-card');
+                }
+                
+                // Profile header
+                const profileHeader = document.createElement('div');
+                profileHeader.className = 'profile-header';
+                
+                const logoImg = document.createElement('img');
+                logoImg.src = agent.logo;
+                logoImg.alt = `${agent.name} logo`;
+                logoImg.className = 'profile-logo';
+                
+                logoImg.onload = function() {
+                    console.log(`✅ Profile logo loaded: ${this.src}`);
+                };
+                
+                logoImg.onerror = function() {
+                    console.log(`❌ Failed to load profile logo: ${this.src}`);
+                    if (!this.dataset.retried) {
+                        this.dataset.retried = 'true';
+                        setTimeout(() => {
+                            this.src = this.src + '?retry=' + Date.now();
+                        }, 100);
+                        return;
+                    }
+                    this.style.display = 'none';
+                };
+                
+                const profileTitle = document.createElement('div');
+                profileTitle.className = 'profile-title';
+                
+                const nameHeading = document.createElement('h3');
+                nameHeading.textContent = agent.name;
+                if (agent.isPremium) {
+                    const premiumBadge = document.createElement('span');
+                    premiumBadge.className = 'premium-badge';
+                    premiumBadge.textContent = 'Featured';
+                    premiumBadge.style.fontSize = '0.7rem';
+                    premiumBadge.style.padding = '2px 8px';
+                    premiumBadge.style.marginLeft = '8px';
+                    nameHeading.appendChild(premiumBadge);
+                }
+                
+                const typeText = document.createElement('div');
+                typeText.className = 'profile-type';
+                typeText.textContent = agent.brokerage;
+                
+                profileTitle.appendChild(nameHeading);
+                profileTitle.appendChild(typeText);
+                
+                profileHeader.appendChild(logoImg);
+                profileHeader.appendChild(profileTitle);
+                
+                // Profile body
+                const profileBody = document.createElement('div');
+                profileBody.className = 'profile-body';
+                
+                // Specialties info
+                const specialtiesInfo = document.createElement('div');
+                specialtiesInfo.className = 'profile-info';
+                
+                const specialtiesHeading = document.createElement('h4');
+                specialtiesHeading.textContent = 'Specialties';
+                
+                const specialtiesList = document.createElement('ul');
+                
+                agent.specialties.forEach(specialty => {
+                    const specialtyItem = document.createElement('li');
+                    specialtyItem.textContent = specialty;
+                    specialtiesList.appendChild(specialtyItem);
+                });
+                
+                specialtiesInfo.appendChild(specialtiesHeading);
+                specialtiesInfo.appendChild(specialtiesList);
+                
+                // Experience info
+                const experienceInfo = document.createElement('div');
+                experienceInfo.className = 'profile-info';
+                
+                const experienceHeading = document.createElement('h4');
+                experienceHeading.textContent = 'Experience & Performance';
+                
+                const experienceList = document.createElement('ul');
+                
+                const expItem = document.createElement('li');
+                expItem.textContent = `Experience: ${agent.experience}`;
+                experienceList.appendChild(expItem);
+                
+                const volumeItem = document.createElement('li');
+                volumeItem.textContent = `Sales Volume: ${agent.salesVolume}`;
+                experienceList.appendChild(volumeItem);
+                
+                const priceItem = document.createElement('li');
+                priceItem.textContent = `Price Range: ${agent.priceRange}`;
+                experienceList.appendChild(priceItem);
+                
+                experienceInfo.appendChild(experienceHeading);
+                experienceInfo.appendChild(experienceList);
+                
+                // Features info
+                const featuresInfo = document.createElement('div');
+                featuresInfo.className = 'profile-info';
+                
+                const featuresHeading = document.createElement('h4');
+                featuresHeading.textContent = 'Key Features';
+                
+                const featuresList = document.createElement('ul');
+                
+                agent.features.forEach(feature => {
+                    const featureItem = document.createElement('li');
+                    featureItem.textContent = feature;
+                    featuresList.appendChild(featureItem);
+                });
+                
+                featuresInfo.appendChild(featuresHeading);
+                featuresInfo.appendChild(featuresList);
+                
+                profileBody.appendChild(specialtiesInfo);
+                profileBody.appendChild(experienceInfo);
+                profileBody.appendChild(featuresInfo);
+                
+                // Profile footer
+                const profileFooter = document.createElement('div');
+                profileFooter.className = 'profile-footer';
+                
+                const ratingDiv = document.createElement('div');
+                ratingDiv.className = 'profile-rating';
+                
+                if (agent.rating) {
+                    const ratingStars = document.createElement('div');
+                    ratingStars.className = 'star-rating';
+                    
+                    const fullStars = Math.floor(agent.rating);
+                    const hasHalfStar = agent.rating % 1 >= 0.5;
+                    
+                    for (let i = 0; i < fullStars; i++) {
+                        ratingStars.innerHTML += '★';
+                    }
+                    
+                    if (hasHalfStar) {
+                        ratingStars.innerHTML += '½';
+                    }
+                    
+                    const ratingText = document.createElement('span');
+                    ratingText.textContent = `${agent.rating} (${agent.reviews} reviews)`;
+                    
+                    ratingDiv.appendChild(ratingStars);
+                    ratingDiv.appendChild(ratingText);
+                } else {
+                    ratingDiv.textContent = 'Contact for rating';
+                }
+                
+                const linkDiv = document.createElement('div');
+                linkDiv.className = 'profile-link';
+                
+                const websiteLink = document.createElement('a');
+                websiteLink.href = agent.website;
+                websiteLink.target = '_blank';
+                websiteLink.textContent = 'Visit Website';
+                
+                linkDiv.appendChild(websiteLink);
+                
+                profileFooter.appendChild(ratingDiv);
+                profileFooter.appendChild(linkDiv);
+                
+                // Assemble profile card
+                profileCard.appendChild(profileHeader);
+                profileCard.appendChild(profileBody);
+                profileCard.appendChild(profileFooter);
+                
+                profilesContainer.appendChild(profileCard);
+            });
+        }
+
+        // Setup filter functionality
+        function setupFilters() {
+            const typeFilter = document.getElementById('type-filter');
+            const specialtyFilter = document.getElementById('specialty-filter');
+            const priceFilter = document.getElementById('price-filter');
+            
+            if (!typeFilter || !specialtyFilter || !priceFilter) {
+                console.warn('⚠️ Filter elements not found');
+                return;
+            }
+            
+            const applyFilters = () => {
+                const typeValue = typeFilter.value;
+                const specialtyValue = specialtyFilter.value;
+                const priceValue = priceFilter.value;
+                
+                console.log('🔍 Applying filters:', { typeValue, specialtyValue, priceValue });
+                
+                const filteredAgents = realtorsData.filter(agent => {
+                    // Type filter
+                    if (typeValue !== 'all') {
+                        const agentTypeLower = agent.type.toLowerCase();
+                        let typeMatch = false;
+                        
+                        switch(typeValue) {
+                            case 'team':
+                                typeMatch = agentTypeLower.includes('team');
+                                break;
+                            case 'solo':
+                                typeMatch = agentTypeLower.includes('individual');
+                                break;
+                            case 'brokerage':
+                                typeMatch = agentTypeLower.includes('brokerage');
+                                break;
+                            case 'builder':
+                                typeMatch = agentTypeLower.includes('builder');
+                                break;
+                            default:
+                                typeMatch = agentTypeLower.includes(typeValue);
+                        }
+                        
+                        if (!typeMatch) return false;
+                    }
+                    
+                    // Specialty filter
+                    if (specialtyValue !== 'all') {
+                        let specialtyMatch = false;
+                        
+                        switch(specialtyValue) {
+                            case 'military':
+                                specialtyMatch = agent.militaryFocus;
+                                break;
+                            case 'luxury':
+                                specialtyMatch = agent.luxuryFocus;
+                                break;
+                            case 'newconstruction':
+                                specialtyMatch = agent.newConstructionFocus;
+                                break;
+                            case 'firsttime':
+                                specialtyMatch = agent.firstTimeBuyerFocus;
+                                break;
+                            case 'investment':
+                                specialtyMatch = agent.investmentFocus;
+                                break;
+                            case 'commercial':
+                                specialtyMatch = agent.commercialFocus;
+                                break;
+                        }
+                        
+                        if (!specialtyMatch) return false;
+                    }
+                    
+                    // Price filter
+                    if (priceValue !== 'all') {
+                        let priceMatch = false;
+                        
+                        switch(priceValue) {
+                            case 'under200':
+                                priceMatch = agent.under200k;
+                                break;
+                            case '200-350':
+                                priceMatch = agent.range200to350;
+                                break;
+                            case '350-500':
+                                priceMatch = agent.range350to500;
+                                break;
+                            case '500plus':
+                                priceMatch = agent.range500plus;
+                                break;
+                        }
+                        
+                        if (!priceMatch) return false;
+                    }
+                    
+                    return true;
+                });
+                
+                console.log('✅ Filtered results:', filteredAgents.length, 'agents');
+                
+                updateTableWithFilteredData(filteredAgents);
+            };
+            
+            typeFilter.addEventListener('change', applyFilters);
+            specialtyFilter.addEventListener('change', applyFilters);
+            priceFilter.addEventListener('change', applyFilters);
+        }
+
+        // Update table with filtered data
+        function updateTableWithFilteredData(filteredAgents) {
+            const tableBody = document.querySelector('#comparison-table tbody');
+            tableBody.innerHTML = '';
+            
+            const sortedFilteredAgents = sortAgentsForDisplay(filteredAgents);
+            
+            console.log('🔄 Updating table with sorted filtered agents:', sortedFilteredAgents.length);
+            
+            sortedFilteredAgents.forEach(agent => {
+                const row = document.createElement('tr');
+                if (agent.isPremium) {
+                    row.classList.add('premium-row');
+                }
+                
+                // Create cells similar to populateComparisonTable
+                const nameCell = document.createElement('td');
+                nameCell.classList.add('agent-name-cell');
+                
+                const nameWrapper = document.createElement('div');
+                nameWrapper.classList.add('name-wrapper');
+                
+                const logo = document.createElement('img');
+                logo.src = agent.logo;
+                logo.alt = `${agent.name} Logo`;
+                logo.classList.add('agent-logo-small');
+                logo.loading = 'lazy';
+                
+                logo.onload = function() {
+                    console.log(`✅ Filtered logo loaded: ${this.src}`);
+                };
+                
+                logo.onerror = function() {
+                    console.log(`❌ Failed to load filtered logo: ${this.src}`);
+                    if (!this.dataset.retried) {
+                        this.dataset.retried = 'true';
+                        setTimeout(() => {
+                            this.src = this.src + '?retry=' + Date.now();
+                        }, 100);
+                        return;
+                    }
+                    this.style.display = 'none';
+                };
+                
+                nameWrapper.appendChild(logo);
+                
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = agent.name;
+                nameWrapper.appendChild(nameSpan);
+                
+                if (agent.isPremium) {
+                    const badge = document.createElement('span');
+                    badge.classList.add('premium-badge');
+                    badge.textContent = 'Featured';
+                    badge.style.fontSize = '0.7rem';
+                    badge.style.padding = '2px 8px';
+                    badge.style.marginLeft = '8px';
+                    nameWrapper.appendChild(badge);
+                }
+                
+                nameCell.appendChild(nameWrapper);
+                row.appendChild(nameCell);
+                
+                // Add other cells
+                const typeCell = document.createElement('td');
+                typeCell.textContent = agent.type;
+                row.appendChild(typeCell);
+                
+                const specialtiesCell = document.createElement('td');
+                specialtiesCell.textContent = agent.specialties.slice(0, 2).join(', ');
+                row.appendChild(specialtiesCell);
+                
+                const experienceCell = document.createElement('td');
+                experienceCell.textContent = agent.experience;
+                row.appendChild(experienceCell);
+                
+                const priceCell = document.createElement('td');
+                priceCell.textContent = agent.priceRange;
+                row.appendChild(priceCell);
+                
+                const contactCell = document.createElement('td');
+                contactCell.innerHTML = `<a href="${agent.website}" target="_blank">Contact</a>`;
+                row.appendChild(contactCell);
+                
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Setup matcher functionality
+        function setupMatcher() {
+            const questions = document.querySelectorAll('.matcher-question');
+            const result = document.getElementById('matcher-result');
+            const resultContent = document.getElementById('result-content');
+            const restartButton = document.getElementById('restart-matcher');
+            
+            if (!questions.length || !result || !resultContent || !restartButton) {
+                console.warn('⚠️ Matcher elements not found');
+                return;
+            }
+            
+            let currentQuestion = 0;
+            const answers = {};
+            
+            questions.forEach((question, index) => {
+                const options = question.querySelectorAll('.matcher-option');
+                
+                options.forEach(option => {
+                    option.addEventListener('click', () => {
+                        answers[`question${index + 1}`] = option.getAttribute('data-value');
+                        
+                        question.classList.remove('active');
+                        
+                        if (index < questions.length - 1) {
+                            questions[index + 1].classList.add('active');
+                            currentQuestion = index + 1;
+                        } else {
+                            showMatcherResult();
+                            result.classList.add('active');
+                        }
+                    });
+                });
+            });
+            
+            restartButton.addEventListener('click', () => {
+                for (let key in answers) {
+                    delete answers[key];
+                }
+                
+                result.classList.remove('active');
+                
+                questions.forEach(q => q.classList.remove('active'));
+                questions[0].classList.add('active');
+                currentQuestion = 0;
+            });
+            
+            function showMatcherResult() {
+                let bestMatch;
+                
+                // Enhanced matching algorithm based on answers
+                if (answers.question1 === 'military') {
+                    // Military PCS - recommend specialists
+                    bestMatch = realtorsData.find(agent => agent.id === 'christi-johnson-journey') ||
+                               realtorsData.find(agent => agent.id === 'karen-sheesley') ||
+                               realtorsData.find(agent => agent.militaryFocus);
+                } else if (answers.question1 === 'luxury') {
+                    // Luxury homes - recommend luxury specialists
+                    bestMatch = realtorsData.find(agent => agent.id === 'homes-by-janell') ||
+                               realtorsData.find(agent => agent.id === 'judy-dempcy-homes') ||
+                               realtorsData.find(agent => agent.luxuryFocus);
+                } else if (answers.question1 === 'newconstruction') {
+                    // New construction - recommend builder specialists
+                    bestMatch = realtorsData.find(agent => agent.id === 'kappert-group') ||
+                               realtorsData.find(agent => agent.id === 'huntington-chase') ||
+                               realtorsData.find(agent => agent.newConstructionFocus);
+                } else if (answers.question1 === 'firsttime') {
+                    // First-time buyers - recommend guidance specialists
+                    bestMatch = realtorsData.find(agent => agent.id === 'ellerbrake-group') ||
+                               realtorsData.find(agent => agent.firstTimeBuyerFocus);
+                } else if (answers.question1 === 'commercial') {
+                    // Commercial - recommend commercial specialists
+                    bestMatch = realtorsData.find(agent => agent.id === 'wittenauer-properties') ||
+                               realtorsData.find(agent => agent.commercialFocus);
+                } else if (answers.question3 === 'team') {
+                    // Prefer teams - recommend top teams
+                    bestMatch = realtorsData.find(agent => agent.id === 'judy-dempcy-homes') ||
+                               realtorsData.find(agent => agent.type === 'Team');
+                } else if (answers.question3 === 'solo') {
+                    // Prefer individual agents
+                    bestMatch = realtorsData.find(agent => agent.id === 'cari-brunner') ||
+                               realtorsData.find(agent => agent.type === 'Individual Agent');
+                } else {
+                    // Default to premium agent (Judy Dempcy Homes)
+                    bestMatch = realtorsData.find(agent => agent.isPremium) ||
+                               realtorsData.find(agent => agent.id === 'judy-dempcy-homes');
+                }
+                
+                if (!bestMatch) {
+                    bestMatch = realtorsData.find(agent => agent.isPremium) ||
+                               realtorsData[0]; // Fallback to first agent
+                }
+                
+                // Create result content
+                resultContent.innerHTML = '';
+                
+                const resultCard = document.createElement('div');
+                resultCard.className = 'profile-card';
+                if (bestMatch.isPremium) {
+                    resultCard.classList.add('premium-card');
+                }
+                
+                resultCard.innerHTML = `
+                    <div class="profile-header">
+                        <img src="${bestMatch.logo}" alt="${bestMatch.name} logo" class="profile-logo">
+                        <div class="profile-title">
+                            <h3>${bestMatch.name}${bestMatch.isPremium ? '<span class="premium-badge" style="font-size: 0.7rem; padding: 2px 8px; margin-left: 8px;">Featured</span>' : ''}</h3>
+                            <div class="profile-type">${bestMatch.brokerage}</div>
+                        </div>
+                    </div>
+                    <div class="profile-body">
+                        <p>Based on your preferences, <strong>${bestMatch.name}</strong> is your ideal real estate agent match!</p>
+                        <div class="profile-info">
+                            <h4>Why this match:</h4>
+                            <ul>
+                                ${bestMatch.features.map(feature => `<li>${feature}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="profile-info">
+                            <h4>Contact Information:</h4>
+                            <p><strong>Phone:</strong> ${bestMatch.phone}</p>
+                            <p><strong>Address:</strong> ${bestMatch.address}</p>
+                            <p><strong>Experience:</strong> ${bestMatch.experience}</p>
+                        </div>
+                        <a href="${bestMatch.website}" target="_blank" class="btn btn-primary" style="margin-top: 20px; display: inline-block;">Contact ${bestMatch.name}</a>
+                    </div>
+                `;
+                
+                resultContent.appendChild(resultCard);
+            }
+        }
+
+        // Populate FAQ section
+        function populateFAQSection() {
+            const faqList = document.querySelector('.faq-list');
+            if (!faqList || !faqData) {
+                console.warn('⚠️ FAQ container not found');
+                return;
+            }
+            
+            faqList.innerHTML = '';
+            
+            faqData.forEach((faq, index) => {
+                const faqItem = document.createElement('div');
+                faqItem.classList.add('faq-item');
+                
+                const faqQuestion = document.createElement('div');
+                faqQuestion.classList.add('faq-question');
+                
+                const faqQuestionText = document.createElement('h3');
+                faqQuestionText.textContent = faq.question;
+                faqQuestion.appendChild(faqQuestionText);
+                
+                const faqToggle = document.createElement('span');
+                faqToggle.classList.add('faq-toggle');
+                faqToggle.textContent = '+';
+                faqQuestion.appendChild(faqToggle);
+                
+                faqItem.appendChild(faqQuestion);
+                
+                const faqAnswer = document.createElement('div');
+                faqAnswer.classList.add('faq-answer');
+                
+                const faqAnswerContent = document.createElement('p');
+                faqAnswerContent.textContent = faq.answer;
+                faqAnswer.appendChild(faqAnswerContent);
+                
+                faqItem.appendChild(faqAnswer);
+                
+                // Add click event
+                faqQuestion.addEventListener('click', function() {
+                    // Close other items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        if (item !== faqItem && item.classList.contains('active')) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    faqItem.classList.toggle('active');
+                });
+                
+                faqList.appendChild(faqItem);
+            });
+            
+            console.log('✅ FAQ section populated with', faqData.length, 'questions');
+        }
+    </script>
+</body>
+</html>
