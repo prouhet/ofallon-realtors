@@ -871,9 +871,9 @@
                     <h3>What's your preferred price range?</h3>
                     <div class="matcher-options">
                         <button class="matcher-option" data-value="under200">Under $200K</button>
-                        <button class="matcher-option" data-value="200-350">$200K - $350K</button>
-                        <button class="matcher-option" data-value="350-500">$350K - $500K</button>
-                        <button class="matcher-option" data-value="500plus">$500K+</button>
+                        <button class="matcher-option" data-value="200-400">$200K - $400K</button>
+                        <button class="matcher-option" data-value="400-700">$400K - $700K</button>
+                        <button class="matcher-option" data-value="700plus">$700K+</button>
                         <button class="matcher-option" data-value="flexible">Flexible/Not Sure</button>
                     </div>
                 </div>
@@ -881,11 +881,11 @@
                 <div class="matcher-question" id="question-3">
                     <h3>What type of service do you prefer?</h3>
                     <div class="matcher-options">
-                        <button class="matcher-option" data-value="team">Full-Service Team</button>
-                        <button class="matcher-option" data-value="solo">Individual Agent</button>
-                        <button class="matcher-option" data-value="volume">High-Volume Producer</button>
-                        <button class="matcher-option" data-value="boutique">Boutique/Personal Touch</button>
-                        <button class="matcher-option" data-value="nopreference">No Preference</button>
+                        <button class="matcher-option" data-value="full-service">Full-Service Traditional</button>
+                        <button class="matcher-option" data-value="tech-savvy">Tech-Savvy/Modern</button>
+                        <button class="matcher-option" data-value="discount">Discount/Flat-Fee</button>
+                        <button class="matcher-option" data-value="efficient">High-Volume/Efficient</button>
+                        <button class="matcher-option" data-value="boutique">Personal/Boutique</button>
                     </div>
                 </div>
                 
@@ -902,41 +902,44 @@
     <section id="comparison" class="comparison">
         <div class="container">
             <h2>Real Estate Agent Comparison Chart</h2>
-            <p>Compare all top real estate agents in the O'Fallon area side by side to find the perfect match for your home buying or selling needs.</p>
+            <p>Compare all top real estate agents in the O'Fallon area using our enhanced filtering system to find the perfect match for your specific needs.</p>
             
             <div class="filters">
                 <div class="filter-group">
-                    <label for="type-filter">Agent Type</label>
-                    <select id="type-filter">
-                        <option value="all">All Types</option>
-                        <option value="team">Team</option>
-                        <option value="solo">Individual Agent</option>
-                        <option value="brokerage">Full Brokerage</option>
-                        <option value="builder">Builder/Developer</option>
+                    <label for="client-filter">Client Focus</label>
+                    <select id="client-filter">
+                        <option value="all">All Client Types</option>
+                        <option value="first-time">First-Time Buyers</option>
+                        <option value="experienced">Experienced Buyers</option>
+                        <option value="luxury">Luxury Market Clients</option>
+                        <option value="investment">Investment Property Buyers</option>
+                        <option value="military">Military/Relocations</option>
+                        <option value="seniors">Seniors/Downsizing</option>
                     </select>
                 </div>
                 
                 <div class="filter-group">
-                    <label for="specialty-filter">Specialty Focus</label>
-                    <select id="specialty-filter">
-                        <option value="all">All Specialties</option>
-                        <option value="military">Military Relocation</option>
-                        <option value="luxury">Luxury Homes</option>
-                        <option value="newconstruction">New Construction</option>
-                        <option value="firsttime">First-Time Buyers</option>
+                    <label for="market-filter">Market Focus</label>
+                    <select id="market-filter">
+                        <option value="all">All Market Types</option>
+                        <option value="starter">Starter Homes (Under $200k)</option>
+                        <option value="moveup">Move-Up Properties ($200k-$400k)</option>
+                        <option value="luxury">Luxury Market ($400k-$700k)</option>
+                        <option value="ultra-luxury">Ultra-Luxury ($700k+)</option>
+                        <option value="new-development">New Development Expert</option>
+                        <option value="rural">Rural/Acreage Properties</option>
                         <option value="investment">Investment Properties</option>
-                        <option value="commercial">Commercial</option>
                     </select>
                 </div>
                 
                 <div class="filter-group">
-                    <label for="price-filter">Price Range Focus</label>
-                    <select id="price-filter">
-                        <option value="all">All Price Ranges</option>
-                        <option value="under200">Under $200K</option>
-                        <option value="200-350">$200K - $350K</option>
-                        <option value="350-500">$350K - $500K</option>
-                        <option value="500plus">$500K+</option>
+                    <label for="service-filter">Service Style</label>
+                    <select id="service-filter">
+                        <option value="all">All Service Styles</option>
+                        <option value="full-service">Full-Service Traditional</option>
+                        <option value="tech-savvy">Tech-Savvy/Modern</option>
+                        <option value="discount">Discount/Flat-Fee</option>
+                        <option value="efficient">High-Volume/Efficient</option>
                     </select>
                 </div>
             </div>
@@ -946,10 +949,10 @@
                     <thead>
                         <tr>
                             <th>Agent/Team Name</th>
-                            <th>Type</th>
-                            <th>Specialties</th>
+                            <th>Client Focus</th>
+                            <th>Market Focus</th>
+                            <th>Service Style</th>
                             <th>Experience</th>
-                            <th>Price Range</th>
                             <th>Contact</th>
                         </tr>
                     </thead>
@@ -1097,7 +1100,7 @@
 
     <!-- JavaScript -->
     <script>
-        // Complete Real Estate Agents Data for O'Fallon Area (23 agents/teams)
+        // Enhanced Real Estate Agents Data for O'Fallon Area with new filtering categories
         const realtorsData = [
           {
             id: "judy-dempcy-homes",
@@ -1121,16 +1124,17 @@
               "Luxury market specialist ($500K+)",
               "Advanced Brivity CRM technology"
             ],
+            // New filtering categories
+            clientFocus: "military",
+            marketFocus: "luxury",
+            serviceStyle: "tech-savvy",
+            // Legacy compatibility fields
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "ellerbrake-group",
@@ -1154,16 +1158,15 @@
               "First-time buyer specialists",
               "Personal relationship focus"
             ],
+            clientFocus: "first-time",
+            marketFocus: "moveup",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: false,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "linda-frierdich-group",
@@ -1187,16 +1190,15 @@
               "Full-service capabilities",
               "Commercial and land specialist"
             ],
+            clientFocus: "investment",
+            marketFocus: "luxury",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: true,
-            commercialFocus: true,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: true
           },
           {
             id: "veliz-vice-team",
@@ -1220,16 +1222,15 @@
               "St. Clair County specialists",
               "Strong market preparation"
             ],
+            clientFocus: "experienced",
+            marketFocus: "moveup",
+            serviceStyle: "efficient",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: false,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "toni-lucas-premier",
@@ -1253,16 +1254,15 @@
               "Metro East coverage",
               "Proven team system"
             ],
+            clientFocus: "experienced",
+            marketFocus: "moveup",
+            serviceStyle: "efficient",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: true,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "cari-brunner",
@@ -1286,16 +1286,15 @@
               "20 years experience",
               "Wide price range capability"
             ],
+            clientFocus: "first-time",
+            marketFocus: "starter",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: true,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "kappert-group",
@@ -1319,16 +1318,15 @@
               "50+ years combined experience",
               "Luxury custom homes"
             ],
+            clientFocus: "luxury",
+            marketFocus: "new-development",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "christi-johnson-journey",
@@ -1352,16 +1350,15 @@
               "Multi-million dollar producer",
               "Based in O'Fallon"
             ],
+            clientFocus: "military",
+            marketFocus: "moveup",
+            serviceStyle: "tech-savvy",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: false,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "homes-by-janell",
@@ -1385,16 +1382,15 @@
               "Relationship-focused",
               "10+ years team experience"
             ],
+            clientFocus: "luxury",
+            marketFocus: "ultra-luxury",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: false,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "red-door-realty",
@@ -1418,16 +1414,15 @@
               "Independent brokerage",
               "Multi-generational expertise"
             ],
+            clientFocus: "investment",
+            marketFocus: "investment",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: true,
-            commercialFocus: true,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: true
           },
           {
             id: "coldwell-banker-brown",
@@ -1451,16 +1446,15 @@
               "Major brand recognition",
               "Military relocation focus"
             ],
+            clientFocus: "military",
+            marketFocus: "moveup",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: true,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "strano-associates",
@@ -1484,16 +1478,15 @@
               "Neighborhood expertise",
               "Metro East coverage"
             ],
+            clientFocus: "experienced",
+            marketFocus: "moveup",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "h3-capital",
@@ -1517,16 +1510,15 @@
               "30 years experience",
               "Sales and rentals"
             ],
+            clientFocus: "military",
+            marketFocus: "starter",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: false,
             firstTimeBuyerFocus: true,
             investmentFocus: true,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "scott-heinlein",
@@ -1550,16 +1542,15 @@
               "Luxury market expert",
               "New construction specialist"
             ],
+            clientFocus: "luxury",
+            marketFocus: "luxury",
+            serviceStyle: "tech-savvy",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "jason-thorpe",
@@ -1583,16 +1574,15 @@
               "Broad service area",
               "Strong track record"
             ],
+            clientFocus: "experienced",
+            marketFocus: "moveup",
+            serviceStyle: "efficient",
             militaryFocus: false,
             luxuryFocus: true,
             newConstructionFocus: false,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "nester-realty",
@@ -1616,16 +1606,15 @@
               "Commercial capabilities",
               "Farms and land specialist"
             ],
+            clientFocus: "investment",
+            marketFocus: "rural",
+            serviceStyle: "full-service",
             militaryFocus: false,
             luxuryFocus: true,
             newConstructionFocus: false,
             firstTimeBuyerFocus: true,
             investmentFocus: true,
-            commercialFocus: true,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: true
           },
           {
             id: "ken-battoe",
@@ -1649,16 +1638,15 @@
               "Personal one-on-one service",
               "Stress-free approach"
             ],
+            clientFocus: "seniors",
+            marketFocus: "starter",
+            serviceStyle: "full-service",
             militaryFocus: false,
             luxuryFocus: false,
             newConstructionFocus: false,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: false
+            commercialFocus: false
           },
           {
             id: "wittenauer-properties",
@@ -1682,16 +1670,15 @@
               "Property management",
               "O'Fallon based"
             ],
+            clientFocus: "investment",
+            marketFocus: "investment",
+            serviceStyle: "full-service",
             militaryFocus: false,
             luxuryFocus: false,
             newConstructionFocus: false,
             firstTimeBuyerFocus: false,
             investmentFocus: true,
-            commercialFocus: true,
-            under200k: false,
-            range200to350: false,
-            range350to500: false,
-            range500plus: false
+            commercialFocus: true
           },
           {
             id: "karen-sheesley",
@@ -1715,16 +1702,15 @@
               "Scott AFB expert",
               "Military relocation focus"
             ],
+            clientFocus: "military",
+            marketFocus: "moveup",
+            serviceStyle: "tech-savvy",
             militaryFocus: true,
             luxuryFocus: false,
             newConstructionFocus: false,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: true,
-            range200to350: true,
-            range350to500: true,
-            range500plus: false
+            commercialFocus: false
           },
           {
             id: "ca-jones",
@@ -1748,16 +1734,15 @@
               "Military support programs",
               "Near Scott AFB locations"
             ],
+            clientFocus: "military",
+            marketFocus: "new-development",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: false,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: false,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "huntington-chase",
@@ -1781,16 +1766,15 @@
               "Multi-generational expertise",
               "Custom home capabilities"
             ],
+            clientFocus: "first-time",
+            marketFocus: "new-development",
+            serviceStyle: "full-service",
             militaryFocus: false,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: true,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: false,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "hl-builders",
@@ -1814,16 +1798,15 @@
               "Near Scott AFB",
               "Owner involvement"
             ],
+            clientFocus: "luxury",
+            marketFocus: "new-development",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: false,
             investmentFocus: false,
-            commercialFocus: false,
-            under200k: false,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: false
           },
           {
             id: "cr-holland",
@@ -1847,16 +1830,15 @@
               "Stone Briar development",
               "Property management services"
             ],
+            clientFocus: "luxury",
+            marketFocus: "new-development",
+            serviceStyle: "full-service",
             militaryFocus: true,
             luxuryFocus: true,
             newConstructionFocus: true,
             firstTimeBuyerFocus: false,
             investmentFocus: true,
-            commercialFocus: true,
-            under200k: false,
-            range200to350: true,
-            range350to500: true,
-            range500plus: true
+            commercialFocus: true
           }
         ];
 
@@ -1954,6 +1936,9 @@
             console.log('📊 Realtors data loaded:', realtorsData.length, 'agents/teams');
             console.log('❓ FAQ data loaded:', faqData.length, 'questions');
             
+            // Verify coverage across all filter categories
+            verifyCategorySupport();
+            
             try {
                 initializeNavigation();
                 console.log('✅ Navigation initialized');
@@ -1978,6 +1963,36 @@
             } catch (error) {
                 console.error('❌ Error during initialization:', error);
             }
+        }
+
+        // Verify we have agents in every category
+        function verifyCategorySupport() {
+            console.log('🔍 Verifying category coverage...');
+            
+            const clientFocusCategories = ['first-time', 'experienced', 'luxury', 'investment', 'military', 'seniors'];
+            const marketFocusCategories = ['starter', 'moveup', 'luxury', 'ultra-luxury', 'new-development', 'rural', 'investment'];
+            const serviceStyleCategories = ['full-service', 'tech-savvy', 'discount', 'efficient'];
+            
+            // Check Client Focus coverage
+            console.log('📊 Client Focus Coverage:');
+            clientFocusCategories.forEach(category => {
+                const agents = realtorsData.filter(agent => agent.clientFocus === category);
+                console.log(`  ${category}: ${agents.length} agents (${agents.map(a => a.name).join(', ')})`);
+            });
+            
+            // Check Market Focus coverage
+            console.log('📊 Market Focus Coverage:');
+            marketFocusCategories.forEach(category => {
+                const agents = realtorsData.filter(agent => agent.marketFocus === category);
+                console.log(`  ${category}: ${agents.length} agents (${agents.map(a => a.name).join(', ')})`);
+            });
+            
+            // Check Service Style coverage
+            console.log('📊 Service Style Coverage:');
+            serviceStyleCategories.forEach(category => {
+                const agents = realtorsData.filter(agent => agent.serviceStyle === category);
+                console.log(`  ${category}: ${agents.length} agents (${agents.map(a => a.name).join(', ')})`);
+            });
         }
 
         // Multiple initialization triggers
@@ -2102,25 +2117,48 @@
                 nameCell.appendChild(nameWrapper);
                 row.appendChild(nameCell);
                 
-                // Type cell
-                const typeCell = document.createElement('td');
-                typeCell.textContent = agent.type;
-                row.appendChild(typeCell);
+                // Client Focus cell
+                const clientCell = document.createElement('td');
+                const clientFocusMap = {
+                    'first-time': 'First-Time Buyers',
+                    'experienced': 'Experienced Buyers',
+                    'luxury': 'Luxury Clients',
+                    'investment': 'Investors',
+                    'military': 'Military/PCS',
+                    'seniors': 'Seniors'
+                };
+                clientCell.textContent = clientFocusMap[agent.clientFocus] || 'General';
+                row.appendChild(clientCell);
                 
-                // Specialties cell
-                const specialtiesCell = document.createElement('td');
-                specialtiesCell.textContent = agent.specialties.slice(0, 2).join(', ');
-                row.appendChild(specialtiesCell);
+                // Market Focus cell
+                const marketCell = document.createElement('td');
+                const marketFocusMap = {
+                    'starter': 'Starter Homes',
+                    'moveup': 'Move-Up Properties',
+                    'luxury': 'Luxury Market',
+                    'ultra-luxury': 'Ultra-Luxury',
+                    'new-development': 'New Development',
+                    'rural': 'Rural/Acreage',
+                    'investment': 'Investment Properties'
+                };
+                marketCell.textContent = marketFocusMap[agent.marketFocus] || 'General';
+                row.appendChild(marketCell);
+                
+                // Service Style cell
+                const serviceCell = document.createElement('td');
+                const serviceStyleMap = {
+                    'full-service': 'Full-Service',
+                    'tech-savvy': 'Tech-Savvy',
+                    'discount': 'Discount/Flat-Fee',
+                    'efficient': 'High-Volume'
+                };
+                serviceCell.textContent = serviceStyleMap[agent.serviceStyle] || 'Traditional';
+                row.appendChild(serviceCell);
                 
                 // Experience cell
                 const experienceCell = document.createElement('td');
                 experienceCell.textContent = agent.experience;
                 row.appendChild(experienceCell);
-                
-                // Price range cell
-                const priceCell = document.createElement('td');
-                priceCell.textContent = agent.priceRange;
-                row.appendChild(priceCell);
                 
                 // Contact cell
                 const contactCell = document.createElement('td');
@@ -2321,121 +2359,61 @@
             });
         }
 
-        // Setup filter functionality
+        // Setup enhanced filter functionality
         function setupFilters() {
-            const typeFilter = document.getElementById('type-filter');
-            const specialtyFilter = document.getElementById('specialty-filter');
-            const priceFilter = document.getElementById('price-filter');
+            const clientFilter = document.getElementById('client-filter');
+            const marketFilter = document.getElementById('market-filter');
+            const serviceFilter = document.getElementById('service-filter');
             
-            if (!typeFilter || !specialtyFilter || !priceFilter) {
+            if (!clientFilter || !marketFilter || !serviceFilter) {
                 console.warn('⚠️ Filter elements not found');
                 return;
             }
             
             const applyFilters = () => {
-                const typeValue = typeFilter.value;
-                const specialtyValue = specialtyFilter.value;
-                const priceValue = priceFilter.value;
+                const clientValue = clientFilter.value;
+                const marketValue = marketFilter.value;
+                const serviceValue = serviceFilter.value;
                 
-                console.log('🔍 Applying filters:', { typeValue, specialtyValue, priceValue });
+                console.log('🔍 Applying enhanced filters:', { clientValue, marketValue, serviceValue });
                 
                 const filteredAgents = realtorsData.filter(agent => {
-                    // Type filter
-                    if (typeValue !== 'all') {
-                        const agentTypeLower = agent.type.toLowerCase();
-                        let typeMatch = false;
-                        
-                        switch(typeValue) {
-                            case 'team':
-                                typeMatch = agentTypeLower.includes('team');
-                                break;
-                            case 'solo':
-                                typeMatch = agentTypeLower.includes('individual');
-                                break;
-                            case 'brokerage':
-                                typeMatch = agentTypeLower.includes('brokerage');
-                                break;
-                            case 'builder':
-                                typeMatch = agentTypeLower.includes('builder');
-                                break;
-                            default:
-                                typeMatch = agentTypeLower.includes(typeValue);
-                        }
-                        
-                        if (!typeMatch) return false;
+                    // Client Focus filter
+                    if (clientValue !== 'all' && agent.clientFocus !== clientValue) {
+                        return false;
                     }
                     
-                    // Specialty filter
-                    if (specialtyValue !== 'all') {
-                        let specialtyMatch = false;
-                        
-                        switch(specialtyValue) {
-                            case 'military':
-                                specialtyMatch = agent.militaryFocus;
-                                break;
-                            case 'luxury':
-                                specialtyMatch = agent.luxuryFocus;
-                                break;
-                            case 'newconstruction':
-                                specialtyMatch = agent.newConstructionFocus;
-                                break;
-                            case 'firsttime':
-                                specialtyMatch = agent.firstTimeBuyerFocus;
-                                break;
-                            case 'investment':
-                                specialtyMatch = agent.investmentFocus;
-                                break;
-                            case 'commercial':
-                                specialtyMatch = agent.commercialFocus;
-                                break;
-                        }
-                        
-                        if (!specialtyMatch) return false;
+                    // Market Focus filter
+                    if (marketValue !== 'all' && agent.marketFocus !== marketValue) {
+                        return false;
                     }
                     
-                    // Price filter
-                    if (priceValue !== 'all') {
-                        let priceMatch = false;
-                        
-                        switch(priceValue) {
-                            case 'under200':
-                                priceMatch = agent.under200k;
-                                break;
-                            case '200-350':
-                                priceMatch = agent.range200to350;
-                                break;
-                            case '350-500':
-                                priceMatch = agent.range350to500;
-                                break;
-                            case '500plus':
-                                priceMatch = agent.range500plus;
-                                break;
-                        }
-                        
-                        if (!priceMatch) return false;
+                    // Service Style filter
+                    if (serviceValue !== 'all' && agent.serviceStyle !== serviceValue) {
+                        return false;
                     }
                     
                     return true;
                 });
                 
-                console.log('✅ Filtered results:', filteredAgents.length, 'agents');
+                console.log('✅ Enhanced filtered results:', filteredAgents.length, 'agents');
                 
                 updateTableWithFilteredData(filteredAgents);
             };
             
-            typeFilter.addEventListener('change', applyFilters);
-            specialtyFilter.addEventListener('change', applyFilters);
-            priceFilter.addEventListener('change', applyFilters);
+            clientFilter.addEventListener('change', applyFilters);
+            marketFilter.addEventListener('change', applyFilters);
+            serviceFilter.addEventListener('change', applyFilters);
         }
 
-        // Update table with filtered data
+        // Update table with filtered data (enhanced version)
         function updateTableWithFilteredData(filteredAgents) {
             const tableBody = document.querySelector('#comparison-table tbody');
             tableBody.innerHTML = '';
             
             const sortedFilteredAgents = sortAgentsForDisplay(filteredAgents);
             
-            console.log('🔄 Updating table with sorted filtered agents:', sortedFilteredAgents.length);
+            console.log('🔄 Updating table with enhanced sorted filtered agents:', sortedFilteredAgents.length);
             
             sortedFilteredAgents.forEach(agent => {
                 const row = document.createElement('tr');
@@ -2443,7 +2421,7 @@
                     row.classList.add('premium-row');
                 }
                 
-                // Create cells similar to populateComparisonTable
+                // Create cells with enhanced data structure
                 const nameCell = document.createElement('td');
                 nameCell.classList.add('agent-name-cell');
                 
@@ -2491,22 +2469,45 @@
                 nameCell.appendChild(nameWrapper);
                 row.appendChild(nameCell);
                 
-                // Add other cells
-                const typeCell = document.createElement('td');
-                typeCell.textContent = agent.type;
-                row.appendChild(typeCell);
+                // Enhanced cells with mapping
+                const clientCell = document.createElement('td');
+                const clientFocusMap = {
+                    'first-time': 'First-Time Buyers',
+                    'experienced': 'Experienced Buyers',
+                    'luxury': 'Luxury Clients',
+                    'investment': 'Investors',
+                    'military': 'Military/PCS',
+                    'seniors': 'Seniors'
+                };
+                clientCell.textContent = clientFocusMap[agent.clientFocus] || 'General';
+                row.appendChild(clientCell);
                 
-                const specialtiesCell = document.createElement('td');
-                specialtiesCell.textContent = agent.specialties.slice(0, 2).join(', ');
-                row.appendChild(specialtiesCell);
+                const marketCell = document.createElement('td');
+                const marketFocusMap = {
+                    'starter': 'Starter Homes',
+                    'moveup': 'Move-Up Properties',
+                    'luxury': 'Luxury Market',
+                    'ultra-luxury': 'Ultra-Luxury',
+                    'new-development': 'New Development',
+                    'rural': 'Rural/Acreage',
+                    'investment': 'Investment Properties'
+                };
+                marketCell.textContent = marketFocusMap[agent.marketFocus] || 'General';
+                row.appendChild(marketCell);
+                
+                const serviceCell = document.createElement('td');
+                const serviceStyleMap = {
+                    'full-service': 'Full-Service',
+                    'tech-savvy': 'Tech-Savvy',
+                    'discount': 'Discount/Flat-Fee',
+                    'efficient': 'High-Volume'
+                };
+                serviceCell.textContent = serviceStyleMap[agent.serviceStyle] || 'Traditional';
+                row.appendChild(serviceCell);
                 
                 const experienceCell = document.createElement('td');
                 experienceCell.textContent = agent.experience;
                 row.appendChild(experienceCell);
-                
-                const priceCell = document.createElement('td');
-                priceCell.textContent = agent.priceRange;
-                row.appendChild(priceCell);
                 
                 const contactCell = document.createElement('td');
                 contactCell.innerHTML = `<a href="${agent.website}" target="_blank">Contact</a>`;
@@ -2568,36 +2569,24 @@
                 
                 // Enhanced matching algorithm based on answers
                 if (answers.question1 === 'military') {
-                    // Military PCS - recommend specialists
-                    bestMatch = realtorsData.find(agent => agent.id === 'christi-johnson-journey') ||
-                               realtorsData.find(agent => agent.id === 'karen-sheesley') ||
+                    bestMatch = realtorsData.find(agent => agent.clientFocus === 'military') ||
                                realtorsData.find(agent => agent.militaryFocus);
                 } else if (answers.question1 === 'luxury') {
-                    // Luxury homes - recommend luxury specialists
-                    bestMatch = realtorsData.find(agent => agent.id === 'homes-by-janell') ||
-                               realtorsData.find(agent => agent.id === 'judy-dempcy-homes') ||
+                    bestMatch = realtorsData.find(agent => agent.clientFocus === 'luxury') ||
                                realtorsData.find(agent => agent.luxuryFocus);
                 } else if (answers.question1 === 'newconstruction') {
-                    // New construction - recommend builder specialists
-                    bestMatch = realtorsData.find(agent => agent.id === 'kappert-group') ||
-                               realtorsData.find(agent => agent.id === 'huntington-chase') ||
+                    bestMatch = realtorsData.find(agent => agent.marketFocus === 'new-development') ||
                                realtorsData.find(agent => agent.newConstructionFocus);
                 } else if (answers.question1 === 'firsttime') {
-                    // First-time buyers - recommend guidance specialists
-                    bestMatch = realtorsData.find(agent => agent.id === 'ellerbrake-group') ||
+                    bestMatch = realtorsData.find(agent => agent.clientFocus === 'first-time') ||
                                realtorsData.find(agent => agent.firstTimeBuyerFocus);
-                } else if (answers.question1 === 'commercial') {
-                    // Commercial - recommend commercial specialists
-                    bestMatch = realtorsData.find(agent => agent.id === 'wittenauer-properties') ||
-                               realtorsData.find(agent => agent.commercialFocus);
-                } else if (answers.question3 === 'team') {
-                    // Prefer teams - recommend top teams
-                    bestMatch = realtorsData.find(agent => agent.id === 'judy-dempcy-homes') ||
-                               realtorsData.find(agent => agent.type === 'Team');
-                } else if (answers.question3 === 'solo') {
-                    // Prefer individual agents
-                    bestMatch = realtorsData.find(agent => agent.id === 'cari-brunner') ||
-                               realtorsData.find(agent => agent.type === 'Individual Agent');
+                } else if (answers.question1 === 'investment') {
+                    bestMatch = realtorsData.find(agent => agent.clientFocus === 'investment') ||
+                               realtorsData.find(agent => agent.investmentFocus);
+                } else if (answers.question3 === 'tech-savvy') {
+                    bestMatch = realtorsData.find(agent => agent.serviceStyle === 'tech-savvy');
+                } else if (answers.question3 === 'efficient') {
+                    bestMatch = realtorsData.find(agent => agent.serviceStyle === 'efficient');
                 } else {
                     // Default to premium agent (Judy Dempcy Homes)
                     bestMatch = realtorsData.find(agent => agent.isPremium) ||
